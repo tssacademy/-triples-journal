@@ -109,8 +109,9 @@
     flex: 1; height: 100vh; overflow-y: auto;
     background: radial-gradient(ellipse 70% 50% at 80% 0%, rgba(201,168,76,0.04) 0%, transparent 60%), var(--navy);
     position: relative;
+    display: flex; flex-direction: column;
   }
-  .main-inner { max-width: 920px; margin: 0 auto; padding: 3.2rem 3.5rem 5rem; }
+  .main-inner { max-width: 920px; margin: 0 auto; padding: 3.2rem 3.5rem 3rem; flex: 1; width: 100%; }
 
   .crumb {
     font-size: 0.78rem; color: var(--gold); font-weight: 600;
@@ -533,6 +534,23 @@
     text-align: center; line-height: 1.3;
   }
   .quiz-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy-2);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 1.4rem 2rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .site-footer p {
+    font-size: 0.75rem; color: var(--muted);
+    line-height: 1.8; max-width: 680px; margin: 0 auto 0.4rem;
+  }
+  .site-footer .copy {
+    font-size: 0.68rem; color: rgba(138,155,191,0.45);
+    font-family: var(--font-heading); letter-spacing: 0.06em;
+  }
 </style>
 </head>
 <body>
@@ -550,7 +568,7 @@
       <div class="sidebar-tag">คอมมูนิตี้การลงทุนแบบยั่งยืน</div>
     </div>
     <nav class="nav-scroll" id="navScroll"></nav>
-    <div class="sidebar-foot">🌲 Triple S Community<br>⚠️ การลงทุนมีความเสี่ยง ผลตอบแทนในอดีตไม่รับประกันผลตอบแทนในอนาคต</div>
+    <div class="sidebar-foot"></div>
     <div class="social-section">
       <div class="social-title">ติดตามพี่บีแบร์</div>
       <div class="social-links">
@@ -591,6 +609,9 @@
 
   <main class="main" id="main">
     <div class="main-inner" id="mainInner"></div>
+    <footer class="site-footer">
+      <p>Triple S Community เป็นแพลตฟอร์มเพื่อการศึกษาและการแลกเปลี่ยนความรู้ด้านการเงินและการเทรด เนื้อหาทั้งหมดไม่ใช่คำแนะนำหรือการชักชวนให้ลงทุน ผู้ใช้งานควรศึกษาข้อมูลเพิ่มเติมและรับผิดชอบต่อการตัดสินใจของตนเอง การลงทุนมีความเสี่ยงและอาจสูญเสียเงินลงทุนได้ทั้งหมดหรือบางส่วน</p>
+    </footer>
   </main>
 </div>
 
@@ -902,8 +923,8 @@ const panels = {
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"ใช้เพื่อเตรียมสอบกองทุน ต้องการ track record ที่น่าเชื่อถือ Triple S Journal ช่วยให้มีประวัติครบ ไม่ต้องมานั่งรวบรวมย้อนหลังเอง มั่นใจขึ้นก่อนไปสอบ"</p>
-        <div class="rev-name">— มิน, นักศึกษาที่กำลังสอบเทรดกองทุน License</div>
+        <p class="rev-text">"ใช้ฝึกเตรียมสอบกองทุน ต้องการ track record ที่น่าเชื่อถือ Triple S Journal ช่วยให้มีประวัติครบ ไม่ต้องมานั่งรวบรวมย้อนหลังเอง มั่นใจขึ้นก่อนไปสอบ"</p>
+        <div class="rev-name">— มิน, นักศึกษาที่กำลังสอบเทรดกองทุน</div>
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★☆</div>
@@ -912,7 +933,7 @@ const panels = {
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"66 วันแรกรู้สึกว่าวิธีการเข้าไม้เปลี่ยนไป รู้สึกกล้าๆ เข้า-ออกไม้ เพราะเราสมีระบบ กลายเป็นส่วนหนึ่งของ routine การเทรดไปแล้วจริงๆ"</p>
+        <p class="rev-text">"66 วันแรกรู้สึกว่าวิธีการเข้าไม้เปลี่ยนไป รู้สึกกล้าเข้า-ออกไม้ เพราะเรามีระบบ กลายเป็นส่วนหนึ่งของ routine การเทรดไปแล้วจริงๆ"</p>
         <div class="rev-name">— กัน, เทรดเดอร์มือใหม่ปีแรก</div>
       </div>
     </div>
